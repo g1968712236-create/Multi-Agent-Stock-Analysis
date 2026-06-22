@@ -30,7 +30,7 @@ jobs:
         env:
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
           KIMI_BASE_URL: https://api.kimi.com/coding/v1
-          KIMI_MODEL: kimi-2.6
+          KIMI_MODEL: kimi-for-coding
         run: python scripts/run_pipeline.py --stage all --ci
 
       - name: Commit and push
