@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F5F0E1;
+  --color-paper-dark: #EDE6D1;
+  --color-ink: #1A1A2E;
+  --color-ink-light: #4A4A5E;
+  --color-stock-red: #C62828;
+  --color-stock-green: #2E7D32;
+  --color-stock-orange: #E65100;
+  --color-border-line: #2A2A3E;
+  --color-border-light: #D4CDB8;
+  --color-gold: #B8860B;
+
+  --font-display: "Playfair Display", serif;
+  --font-serif-cn: "Noto Serif SC", serif;
+  --font-serif: "Noto Serif", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+:root {
+  font-family: "Noto Serif SC", serif;
+  color: #1A1A2E;
+  background-color: #E8E0CC;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* A股标准：红涨绿跌 */
+.trend-up {
+  color: #C62828;
+}
+
+.trend-down {
+  color: #2E7D32;
+}
+
+.bg-trend-up {
+  background-color: rgba(198, 40, 40, 0.06);
+}
+
+.bg-trend-down {
+  background-color: rgba(46, 125, 50, 0.06);
+}
+
+.newspaper-shadow {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.masthead-border {
+  border-top: 4px solid #1A1A2E;
+  border-bottom: 2px solid #1A1A2E;
+}
+
+.triple-border {
+  border-top: 4px double #1A1A2E;
+  border-bottom: 2px solid #1A1A2E;
+}
+
+.double-border {
+  border-top: 3px double #1A1A2E;
+  border-bottom: 1px solid #1A1A2E;
+}
+
+.section-label {
+  font-variant: small-caps;
+  letter-spacing: 0.2em;
+}
+
+.score-bar {
+  height: 3px;
+  background: #D4CDB8;
+  position: relative;
+}
+
+.score-bar-fill {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.nav-tab {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.nav-tab:hover {
+  color: #C62828;
+}
+
+.nav-tab.active {
+  color: #C62828;
+  font-weight: 700;
+}
+
+.nav-tab.active::after {
+  background: #C62828;
+}
+
+.stock-subtab.active {
+  background: #1A1A2E;
+  color: #F5F0E1;
+  border-color: #1A1A2E;
+}
+
+table.stock-table th,
+table.stock-table td {
+  border-bottom: 1px solid #D4CDB8;
+}
+
+table.stock-table thead th {
+  border-bottom: 2px solid #1A1A2E;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.idx-card {
+  transition: all 0.2s;
+}
+
+.idx-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
