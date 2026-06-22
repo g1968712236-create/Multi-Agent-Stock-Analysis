@@ -29,7 +29,7 @@ jobs:
       - name: Run daily pipeline
         env:
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
-          KIMI_BASE_URL: https://api.moonshot.cn/v1
+          KIMI_BASE_URL: https://api.kimi.com/coding/v1
           KIMI_MODEL: kimi-2.6
         run: python scripts/run_pipeline.py --stage all --ci
 

@@ -9,7 +9,7 @@ import requests
 
 
 class KimiAPIClient:
-    def __init__(self, api_key: Optional[str] = None, base_url: str = "https://api.moonshot.cn/v1", model: str = "kimi-2.6"):
+    def __init__(self, api_key: Optional[str] = None, base_url: str = "https://api.kimi.com/coding/v1", model: str = "kimi-2.6"):
         self.api_key = api_key or os.environ.get("KIMI_API_KEY")
         if not self.api_key:
             raise ValueError("KIMI_API_KEY is required")
